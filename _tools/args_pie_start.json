@@ -1,0 +1,3 @@
+{
+  "code": "import unreal\nles = unreal.get_editor_subsystem(unreal.LevelEditorSubsystem)\nprint('load:', les.load_level('/Game/BODYCAMTESTMAP'))\nif unreal.WidgetService.is_pie_running():\n    unreal.WidgetService.stop_pie()\nprint('start_pie:', unreal.WidgetService.start_pie())\n"
+}

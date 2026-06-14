@@ -1,0 +1,3 @@
+{
+  "code": "import unreal\nwalk = unreal.load_asset('/Game/Character/A_Walk')\nopts = unreal.AnimPoseEvaluationOptions()\npose = unreal.AnimPoseExtensions.get_anim_pose_at_time(walk, 0.0, opts)\nnames = [str(n) for n in unreal.AnimPoseExtensions.get_bone_names(pose)]\nprint('NUM:', len(names))\nprint('BONES:', names)\n"
+}

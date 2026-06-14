@@ -1,0 +1,3 @@
+{
+  "code": "import unreal\nprint([m for m in dir(unreal.AnimGraphService) if not m.startswith('_')])\n"
+}

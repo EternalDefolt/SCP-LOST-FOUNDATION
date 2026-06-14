@@ -1,0 +1,3 @@
+{
+  "code": "import unreal\nabp='/Game/Character/ABP_Bodycam'\nBP=unreal.BlueprintService\ngid = BP.add_get_variable_node(abp,'Walk','WalkPlayRate',-260,180)\nprint('get node:', gid)\nok = BP.connect_nodes(abp,'Walk',gid,'WalkPlayRate','FD4B8E16402A37FCFBF0E1A744A5CE19','PlayRate')\nprint('wire:', ok)\nres = BP.compile_blueprint(abp)\nprint('compile:', res)\nv = unreal.AnimGraphService.validate_state_machine(abp,'Locomotion')\nprint('valid:', v.is_valid, [str(e) for e in v.errors], [str(w) for w in v.warnings])\nprint('save:', unreal.EditorAssetLibrary.save_asset(abp, only_if_is_dirty=False))\n"
+}

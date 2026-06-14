@@ -1,0 +1,3 @@
+{
+  "code": "import unreal\nabp='/Game/Character/ABP_Bodycam'\nd = unreal.BlueprintService.get_node_details(abp, 'AnimGraph', '732C69FB4B2BBCA7C240C9980E47A925')\nprint(d)\n"
+}

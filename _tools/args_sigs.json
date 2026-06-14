@@ -1,0 +1,3 @@
+{
+  "code": "import unreal\nfor m in ['add_function_call_node','add_get_variable_node','disconnect_anim_node','connect_nodes','set_transition_blend','add_variable']:\n    f=getattr(unreal.BlueprintService,m,None) or getattr(unreal.AnimGraphService,m,None)\n    print('===',m,'===')\n    print((f.__doc__ or '').split('Returns')[0])\n"
+}

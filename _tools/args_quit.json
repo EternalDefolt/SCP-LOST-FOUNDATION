@@ -1,0 +1,1 @@
+{ "code": "import unreal\nunreal.SystemLibrary.quit_editor()\nprint('quit requested')\n" }

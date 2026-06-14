@@ -1,0 +1,3 @@
+{
+  "code": "import unreal\nabp='/Game/Character/ABP_Bodycam'\nprint('VARS:', unreal.BlueprintService.list_variables(abp))\nimport inspect\nfor m in ['add_modify_bone_node','connect_anim_nodes','get_output_pose_node_id']:\n    f = getattr(unreal.AnimGraphService, m)\n    print('---', m, '---')\n    print(f.__doc__)\n"
+}

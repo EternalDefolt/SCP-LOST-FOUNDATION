@@ -1,0 +1,3 @@
+{
+    "code":  "import unreal\neal = unreal.EditorAssetLibrary\nfor p in (\"/Game/Character/A_Walk\",\"/Game/Character/T_ClassD_Paint\",\"/Game/Character/M_ClassD\"):\n    print(p, eal.does_asset_exist(p))\nS = unreal.AnimSequenceService\ntry:\n    poses = S.get_pose_at_time(\"/Game/Character/A_Walk\", 0.0, True)\n    zs = [pp.transform.translation.z for pp in poses]\n    print(\"A_Walk height cm:\", round(max(zs)-min(zs),1))\nexcept Exception as e:\n    print(\"pose err:\", e)"
+}

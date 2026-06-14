@@ -1,0 +1,3 @@
+{
+  "code": "import unreal\nfor cls, filt in [('unreal.AnimGraphService','node'),('unreal.AnimGraphService','bone'),('unreal.BlueprintService','variable')]:\n    try:\n        c = eval(cls)\n        meths = [m for m in dir(c) if filt in m.lower()]\n        print(cls, filt, '->', meths)\n    except Exception as e:\n        print(cls, 'err', e)\n"
+}
